@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftEventBus
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("url host :\(url.host!)")
         print("url path :\(url.path)")
         print("url query :\(url.query ?? "")")
-        
+        SwiftEventBus.post("jscallback", sender: JSCallback.init("abc", params: "hello"))
         return true
     }
     

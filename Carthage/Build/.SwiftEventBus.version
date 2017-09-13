@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "ea603a2b62fc4cb5173748c5c26996e58e0d726ccda7ae43096a1c6e36e82599",
+      "name" : "SwiftEventBus"
+    }
+  ],
+  "commitish" : "2.2.0",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}

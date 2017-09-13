@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftEventBus
 
 class FirstViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
@@ -14,7 +15,12 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print(webView)
+        SwiftEventBus.onMainThread(self, name: "jscallback") { notification in
+            let jsCallback: JSCallback = notification.object as! JSCallback
+            print(jsCallback.callbackId)
+            print(jsCallback.params)
+            self.webView.stringByEvaluatingJavaScript(from: "fromNative('\(jsCallback.callbackId)', '\(jsCallback.params)')")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +33,8 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func loadBtn2Touched(_ sender: Any) {
-        webView.loadHTMLString("<a href='myjsbridge://abc.com/home?abc=1'>click2 me</a>", baseURL: URL.init(string: "home"))
+        
+        webView.loadHTMLString("<a href='myjsbridge://abc.com/home?abc=1'>click2 me</a><script>alert('init script');function fromNative(callbackId, params) {alert('callbackId: ' + callbackId + ', params: ' + params)}</script>", baseURL: URL.init(string: "home"))
     }
 }
 

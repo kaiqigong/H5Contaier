@@ -1,0 +1,2 @@
+github "facebook/KVOController"
+github "cesarferreira/SwiftEventBus" == 2.2.0
