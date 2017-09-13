@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		435128FE1F68DC180078E6C9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 435128FD1F68DC180078E6C9 /* Default-568h@2x.png */; };
 		43FDFE901F68CAA500D776BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FDFE8F1F68CAA500D776BF /* AppDelegate.swift */; };
 		43FDFE921F68CAA500D776BF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FDFE911F68CAA500D776BF /* FirstViewController.swift */; };
 		43FDFE941F68CAA500D776BF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FDFE931F68CAA500D776BF /* SecondViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		435128FD1F68DC180078E6C9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		43FDFE8C1F68CAA500D776BF /* HybridContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FDFE8F1F68CAA500D776BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43FDFE911F68CAA500D776BF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		43FDFE831F68CAA400D776BF = {
 			isa = PBXGroup;
 			children = (
+				435128FD1F68DC180078E6C9 /* Default-568h@2x.png */,
 				43FDFE8E1F68CAA500D776BF /* HybridContainer */,
 				43FDFEA51F68CAA500D776BF /* HybridContainerTests */,
 				43FDFEB01F68CAA500D776BF /* HybridContainerUITests */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43FDFE9C1F68CAA500D776BF /* LaunchScreen.storyboard in Resources */,
+				435128FE1F68DC180078E6C9 /* Default-568h@2x.png in Resources */,
 				43FDFE991F68CAA500D776BF /* Assets.xcassets in Resources */,
 				43FDFE971F68CAA500D776BF /* Main.storyboard in Resources */,
 			);
@@ -509,6 +513,7 @@
 				43FDFEB81F68CAA500D776BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43FDFEB91F68CAA500D776BF /* Build configuration list for PBXNativeTarget "HybridContainerTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				43FDFEBB1F68CAA500D776BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43FDFEBC1F68CAA500D776BF /* Build configuration list for PBXNativeTarget "HybridContainerUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +531,7 @@
 				43FDFEBE1F68CAA500D776BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
