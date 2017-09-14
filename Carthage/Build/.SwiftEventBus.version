@@ -1,7 +1,7 @@
 {
   "iOS" : [
     {
-      "hash" : "ea603a2b62fc4cb5173748c5c26996e58e0d726ccda7ae43096a1c6e36e82599",
+      "hash" : "50becdfcf2a338d62ddabe8e94e6f6b12ec55d1d0764ef97e0035407071200c4",
       "name" : "SwiftEventBus"
     }
   ],

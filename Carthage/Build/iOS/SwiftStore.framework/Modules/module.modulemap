@@ -1,0 +1,10 @@
+framework module SwiftStore {
+  umbrella header "SwiftStore.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftStore.Swift {
+    header "SwiftStore-Swift.h"
+}

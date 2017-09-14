@@ -17,16 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        URLProtocol.registerClass(LocalCacheProtocol.self)
         return true
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        print("url \(url)")
-        print("url host :\(url.host!)")
-        print("url path :\(url.path)")
-        print("url query :\(url.query ?? "")")
         SwiftEventBus.post("jscallback", sender: JSCallback.init("abc", params: "hello"))
         return true
+    }
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        //        NSURLProtocol.registerClass(MyURLProtocol)
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

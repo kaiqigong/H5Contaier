@@ -12,6 +12,9 @@
 		435129061F691C530078E6C9 /* SwiftEventBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435129051F691C530078E6C9 /* SwiftEventBus.framework */; };
 		435129081F691DC60078E6C9 /* JSCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435129071F691DC60078E6C9 /* JSCallback.swift */; };
 		4351290A1F692E330078E6C9 /* LocalCacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435129091F692E330078E6C9 /* LocalCacheProtocol.swift */; };
+		4351290C1F6A730B0078E6C9 /* SwiftStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4351290B1F6A730B0078E6C9 /* SwiftStore.framework */; };
+		4351290E1F6A73930078E6C9 /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4351290D1F6A73930078E6C9 /* CacheStore.swift */; };
+		435129131F6A842A0078E6C9 /* CachedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435129121F6A842A0078E6C9 /* CachedResponse.swift */; };
 		43FDFE901F68CAA500D776BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FDFE8F1F68CAA500D776BF /* AppDelegate.swift */; };
 		43FDFE921F68CAA500D776BF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FDFE911F68CAA500D776BF /* FirstViewController.swift */; };
 		43FDFE941F68CAA500D776BF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FDFE931F68CAA500D776BF /* SecondViewController.swift */; };
@@ -45,6 +48,9 @@
 		435129051F691C530078E6C9 /* SwiftEventBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftEventBus.framework; path = Carthage/Build/iOS/SwiftEventBus.framework; sourceTree = "<group>"; };
 		435129071F691DC60078E6C9 /* JSCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCallback.swift; sourceTree = "<group>"; };
 		435129091F692E330078E6C9 /* LocalCacheProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCacheProtocol.swift; sourceTree = "<group>"; };
+		4351290B1F6A730B0078E6C9 /* SwiftStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftStore.framework; path = Carthage/Build/iOS/SwiftStore.framework; sourceTree = "<group>"; };
+		4351290D1F6A73930078E6C9 /* CacheStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheStore.swift; sourceTree = "<group>"; };
+		435129121F6A842A0078E6C9 /* CachedResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedResponse.swift; sourceTree = "<group>"; };
 		43FDFE8C1F68CAA500D776BF /* HybridContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FDFE8F1F68CAA500D776BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43FDFE911F68CAA500D776BF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4351290C1F6A730B0078E6C9 /* SwiftStore.framework in Frameworks */,
 				435129061F691C530078E6C9 /* SwiftEventBus.framework in Frameworks */,
 				435129031F6918500078E6C9 /* KVOController.framework in Frameworks */,
 			);
@@ -91,6 +98,7 @@
 		435129011F6918500078E6C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4351290B1F6A730B0078E6C9 /* SwiftStore.framework */,
 				435129051F691C530078E6C9 /* SwiftEventBus.framework */,
 				435129021F6918500078E6C9 /* KVOController.framework */,
 			);
@@ -131,6 +139,8 @@
 				43FDFE9D1F68CAA500D776BF /* Info.plist */,
 				435129071F691DC60078E6C9 /* JSCallback.swift */,
 				435129091F692E330078E6C9 /* LocalCacheProtocol.swift */,
+				4351290D1F6A73930078E6C9 /* CacheStore.swift */,
+				435129121F6A842A0078E6C9 /* CachedResponse.swift */,
 			);
 			path = HybridContainer;
 			sourceTree = "<group>";
@@ -293,10 +303,12 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/KVOController.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftEventBus.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftStore.framework",
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KVOController.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftEventBus.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftStore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -311,8 +323,10 @@
 			files = (
 				43FDFE941F68CAA500D776BF /* SecondViewController.swift in Sources */,
 				435129081F691DC60078E6C9 /* JSCallback.swift in Sources */,
+				435129131F6A842A0078E6C9 /* CachedResponse.swift in Sources */,
 				4351290A1F692E330078E6C9 /* LocalCacheProtocol.swift in Sources */,
 				43FDFE901F68CAA500D776BF /* AppDelegate.swift in Sources */,
+				4351290E1F6A73930078E6C9 /* CacheStore.swift in Sources */,
 				43FDFE921F68CAA500D776BF /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
